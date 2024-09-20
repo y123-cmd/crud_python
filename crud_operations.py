@@ -1,17 +1,17 @@
-# Sample user data structure
+
 users = []
 
-# Function to create a user
+
 def create_user():
     user_id = input("Enter user ID: ")
     name = input("Enter user name: ")
     email = input("Enter user email: ")
     
-    # Add the user to the list
+    
     users.append({"id": user_id, "name": name, "email": email})
     print("User added successfully!\n")
 
-# Function to read (list) all users
+
 def read_users():
     if not users:
         print("No users available.")
@@ -22,11 +22,11 @@ def read_users():
         print(f"ID: {user['id']}, Name: {user['name']}, Email: {user['email']}")
     print()
 
-# Function to update a user
+
 def update_user():
     user_id = input("Enter user ID to update: ")
     
-    # Find the user by ID
+    
     for user in users:
         if user['id'] == user_id:
             name = input(f"Enter new name (current: {user['name']}): ")
@@ -38,7 +38,7 @@ def update_user():
     
     print("User not found!\n")
 
-# Function to delete a user
+
 def delete_user():
     user_id = input("Enter user ID to delete: ")
     
@@ -50,7 +50,6 @@ def delete_user():
     
     print("User not found!\n")
 
-# Main loop
 def main():
     while True:
         print("1. Create User")
